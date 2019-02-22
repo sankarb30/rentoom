@@ -1,13 +1,24 @@
 <html><head><meta charset="UTF-8"><title>Contact Us</title>
 
-<script type="text/javascript" language="javascript">
-window.onload=function() {
-  document.getElementById("form").onsubmit=function() {
-    window.location.replace("https://rentoom.in");
-    return false;
-  }
-}
-</script>
+ <script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js">&lt;/script>
+ &lt;script>
+ 
+ var eventposted=0;
+ 
+ $(document).ready(function(){
+   $('input.button').click(function() {
+     window.setInterval(foo, 100);
+   });
+ });
+ 
+ function foo(){
+   if(($(".form-submission-text").is(':visible')) && (eventposted==0)){
+     window.location = "<b>https://rentoom.in</b>";
+     eventposted=1;
+   }
+ }
+ 
+ </script>
 
 <link href="css/form.css" rel="stylesheet" type="text/css"><script src="js/validation.js"></script>
 </head><body class="zf-backgroundBg"><!-- Change or deletion of the name attributes in the input tag will lead to empty values on record submission-->
